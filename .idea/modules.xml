@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Service_goods/Service_goods.iml" filepath="$PROJECT_DIR$/Service_goods/Service_goods.iml" />
       <module fileurl="file://$PROJECT_DIR$/nacos01.iml" filepath="$PROJECT_DIR$/nacos01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_order/service_order.iml" filepath="$PROJECT_DIR$/service_order/service_order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_store/service_store.iml" filepath="$PROJECT_DIR$/service_store/service_store.iml" />
     </modules>
   </component>
 </project>
