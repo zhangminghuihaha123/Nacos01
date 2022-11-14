@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: service_order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        ephemeral: false   #保证服务熔断也可以维持一段时间
