@@ -1,9 +1,9 @@
 server:
-  port: 8080
+  port: 8000
 
 spring:
   application:
-    name: service_order
+    name: service-order
   cloud:
     nacos:
       discovery:
