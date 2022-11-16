@@ -1,4 +1,4 @@
-package com.zmh.goods.config;
+package com.zmh.store.controller.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -15,15 +15,13 @@ public class NacosConfig {
     /*比如现在在Service_goods模块中，想要去拿取在Service_order的模块下的数据，因为端口不一致，不可以直接拿*/
     /*所以需要跨越端口，而RestTemplate帮我们解决这件事*/
     /*由于RestTemplate不被spring托管，需要用@Bean托管，然后注入到所需要的容器中*/
-   /* @Bean
-    @LoadBalanced *//*负载均衡*//*
+    @Bean
+    @LoadBalanced /*负载均衡*/
     public RestTemplate restTemplate(){
-        *//*解决中文乱码问题*//*
+        /*解决中文乱码问题*/
         RestTemplate restTemplate=new RestTemplate();
         restTemplate.getMessageConverters().set(1,new StringHttpMessageConverter(StandardCharsets.UTF_8));
         return restTemplate;
-    }*/
+    }
 
-
-    /*如果使用了OpenFeign就不用用传统的RestTemplate来处理*/
 }

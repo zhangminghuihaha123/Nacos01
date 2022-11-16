@@ -8,4 +8,12 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-        ephemeral: false   #保证服务熔断也可以维持一段时间
+        ephemeral: false    #保证服务熔断也可以维持一段时间
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 2000   #请求服务连接时间不能超过2秒
+        readTimeout: 2000   #接口请求获取到数据时间不超过2秒
+        #如果超过规定时间，直接断掉
